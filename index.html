@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use  
+           https://firebase.google.com/docs/web/setup#available-libraries -->
+           
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+
+<script>
+  var firebaseConfig = {
+    apiKey: "AIzaSyAfHf815wv6KQU4lH9u6AsNnE16ok7Truc",
+    authDomain: "testing-cabf3.firebaseapp.com",
+    projectId: "testing-cabf3",
+    storageBucket: "testing-cabf3.appspot.com",
+    messagingSenderId: "432340193740",
+    appId: "1:432340193740:web:fca43aa551e89948de8d69",
+    measurementId: "G-FP4LJCD33P"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+  </head>
+    <body>
+    <input type="text" name="email" placeholder="Email" />
+    <input type="password" name="password" placeholder="Password" />
+    firebase.auth().createUserWithEmailAndPassword(email, password)
+  .then((user) => {
+    alert("It Works");
+  })
+  .catch((error) => {
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // ..
+  });
+    </body>
+  
+</html?
