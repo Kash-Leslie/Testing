@@ -26,6 +26,8 @@
     <body>
     <input type="text" name="email" placeholder="Email" />
     <input type="password" name="password" placeholder="Password" />
+      <script>
+        
     firebase.auth().createUserWithEmailAndPassword(email, password)
   .then((user) => {
     alert("It Works");
@@ -35,6 +37,7 @@
     var errorMessage = error.message;
     // ..
   });
+      </script>
     </body>
   
 </html?
