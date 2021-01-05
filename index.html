@@ -24,20 +24,17 @@
 </script>
   </head>
     <body>
-    <input type="text" name="email" placeholder="Email" />
-    <input type="password" name="password" placeholder="Password" />
       <script>
-        
-    firebase.auth().createUserWithEmailAndPassword(email, password)
-  .then((user) => {
-    alert("It Works");
-  })
-  .catch((error) => {
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    // ..
-  });
-      </script>
+       <input type="text" name="email" placeholder="Email" />
+       <input type="password" name="password" placeholder="Password" />  
+        firebase.auth().createUserWithEmailAndPassword(email, password)
+         .then((user) => {
+            alert("It Works");
+                         })
+          .catch((error) => {
+             var errorCode = error.code;
+             var errorMessage = error.message;
+                            });
+       </script>
     </body>
-  
-</html?
+</html>
