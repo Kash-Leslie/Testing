@@ -1,11 +1,13 @@
 <!DOCTYPE HTML>
 <html>
-  <head>
-  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+   <body>
+       <input type= "text" name="email" placeholder="Email" />
+       <input type= "password" name="password" placeholder="Password" />  
+       <button onclick= "auth()" value="Submit"/>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use  
-           https://firebase.google.com/docs/web/setup#available-libraries -->
-           
+      
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
 
 <script>
@@ -22,23 +24,12 @@
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
 </script>
-  </head>
-    <body>
-       <input type= "text" name="email" placeholder="Email" />
-       <input type= "password" name="password" placeholder="Password" />  
-       <button onclick= "auth()" value="Submit"/>
        
   <script>
    function auth() {
      firebase.auth().createUserWithEmailAndPassword(email, password)
-       .then((user) => {
-         window.location.href="login.html"
-                       });
-        .catch((error) => {
-          var errorCode = error.code;
-          var errorMessage = error.message;
-                          });
+       .then((user) => {});
                    }   
-       </script>
-    </body>
+   </script>           
+   </bosy>
 </html>
