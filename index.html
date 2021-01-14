@@ -24,6 +24,7 @@
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
+  var user = firebase.auth().currentUser;
 </script>
        
   <script>
