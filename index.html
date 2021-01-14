@@ -3,7 +3,7 @@
    <body>
        <input type= "text" name="email" placeholder="Email" />
        <input type= "password" name="password" placeholder="Password" />  
-       <button onclick= "auth()" value="Submit"/>
+       <button onclick= "sign()" value="Submit"/>
 
       
 <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
@@ -26,10 +26,17 @@
 </script>
        
   <script>
-   function auth() {
+   function create() {
      firebase.auth().createUserWithEmailAndPassword(email, password)
        .then((user) => {});
-                   }   
-   </script>           
-   </bosy>
+   }  
+   </script> 
+      
+   <script>
+     function sign() {
+       firebase.auth().signInWithEmailAndPassword(email, password)
+        .then((user) => {})
+   }
+      </script>
+   </body>
 </html>
