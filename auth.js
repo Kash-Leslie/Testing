@@ -6,11 +6,10 @@ let config = {
   };
   // Initialize Firebase
   firebase.initializeApp(config);
-  const auth = firebase.auth();
   let itemsRef = firebase.database().ref("items");
 
 document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById("save").addEventListener('click',function()
+    document.getElementById("sign-up")addEventListener('click',function()
     {
          var lostItem = {
            username: document.getElementById("signup-email").value,
