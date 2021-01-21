@@ -9,12 +9,13 @@ let config = {
   const auth = firebase.auth();
   const itemsRef = firebase.database().ref("items");
 
-
+document.addEventListener('DOMContenetLoaded', function() {
 document.getElementById("save").addEventListener('click',function()
         {
             var lostItem = {
               username: document.getElementById("signup-email").value,
               password: document.getElementById("signup-password").value,
-            }
-            itemsRef.update(lostItem);
             };
+            itemsRef.update(lostItem);
+            });
+});
