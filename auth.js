@@ -5,7 +5,7 @@ let config = {
     projectId: "testing-cabf3"
   };
   // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+  firebase.initializeApp(config);
   const auth = firebase.auth();
   const itemsRef = firebase.database().ref("items");
 
