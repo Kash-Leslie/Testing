@@ -9,7 +9,7 @@ let config = {
   // Initialize Firebase
   firebase.initializeApp(config);
   let database = firebase.database();
-  let itemsRef = firebase.database().ref("items");
+  let itemsRef = firebase.database().ref("auth");
 
   function updateFirebase() {
       
@@ -19,8 +19,8 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById("sign-up").addEventListener('click',function()
     {
          var lostItem = {
-           username: document.getElementById("signup-email").value,
-           password: document.getElementById("signup-password").value,
+           user: document.getElementById("signup-email").value,
+           pass: document.getElementById("signup-password").value,
          };
          itemsRef.push(lostItem);
          });
