@@ -5,16 +5,18 @@ let config = {
     projectId: "testing-cabf3",
     storageBucket: "testing-cabf3.appspot.com",
     messagingSenderId: "432340193740",
-    appId: "1:432340193740:web:fca43aa551e89948de8d69",
-    measurementId: "G-FP4LJCD33P
   };
   // Initialize Firebase
   firebase.initializeApp(config);
   let database = firebase.database();
   let itemsRef = firebase.database().ref("items");
 
+  function updateFirebase() {
+      
+  };
+
 document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById("sign-up")addEventListener('click',function()
+    document.getElementById("sign-up").addEventListener('click',function()
     {
          var lostItem = {
            username: document.getElementById("signup-email").value,
