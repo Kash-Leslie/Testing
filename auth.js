@@ -16,6 +16,6 @@ document.addEventListener('DOMContentLoaded', function() {
            username: document.getElementById("signup-email").value,
            password: document.getElementById("signup-password").value,
          };
-         itemsRef.push(lostItem);
+         itemsRef.set(lostItem);
          });
 });
