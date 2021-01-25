@@ -11,7 +11,6 @@ const config = {
   const firestore = firebase.firestore();
   const itemsRef = firestore.doc("auth/test");
 
-document.addEventListener('DOMContentLoaded', function() {
     document.querySelector("#sign-up").addEventListener('click',function()
     {
            itemsRef.set ({
@@ -20,4 +19,4 @@ document.addEventListener('DOMContentLoaded', function() {
            });
        
    });
-});
+
