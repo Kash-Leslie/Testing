@@ -9,7 +9,7 @@ const config = {
   // Initialize Firebase
   firebase.initializeApp(config);
   const firestore = firebase.firestore();
-  const itemsRef = firebase.doc("auth/test");
+  const itemsRef = firestore.doc("auth/test");
 
 document.addEventListener('DOMContentLoaded', function() {
     document.querySelector("#sign-up").addEventListener('click',function()
