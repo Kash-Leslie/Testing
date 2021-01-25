@@ -1,4 +1,4 @@
-let config = {
+const config = {
     apiKey: "AIzaSyAfHf815wv6KQU4lH9u6AsNnE16ok7Truc",
     authDomain: "testing-cabf3.firebaseapp.com",
     databaseURL: "https://testing-cabf3-default-rtdb.firebaseio.com",
@@ -8,20 +8,16 @@ let config = {
   };
   // Initialize Firebase
   firebase.initializeApp(config);
-  let database = firebase.database();
-  let itemsRef = firebase.database().ref("auth");
-
-  function updateFirebase() {
-      
-  };
+  const firestore = firebase.firestore();
+  const itemsRef = firebase.doc("auth/test");
 
 document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById("sign-up").addEventListener('click',function()
+    document.querySelector("#sign-up").addEventListener('click',function()
     {
-         var lostItem = {
-           user: document.getElementById("signup-email").value,
-           pass: document.getElementById("signup-password").value,
-         };
-         itemsRef.push(lostItem);
-         });
+           itemsRef.set ({
+           user: document.querySelector("#signup-email").value,
+           pass: document.querySelector("#signup-password").value,
+           });
+       
+   });
 });
