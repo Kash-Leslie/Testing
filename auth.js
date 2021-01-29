@@ -8,15 +8,10 @@ const config = {
   };
   // Initialize Firebase
   firebase.initializeApp(config);
-  const firestore = firebase.firestore();
-  const itemsRef = firestore.doc("auth/test");
-
-    document.querySelector("#sign-up").addEventListener('click',function()
-    {
-           itemsRef.set ({
-           user: document.querySelector("#signup-email").value,
-           pass: document.querySelector("#signup-password").value,
-           });
-       
-   });
+  const auth = firebase.auth();
+  const provider = firebase.auth.GoogleAuthProvider();
+  const signIn = document.getElementById('sign-up')
+  
+  signIn.onclick = () => auth.signInWithPopup(provider);
+   
 
