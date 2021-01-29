@@ -9,7 +9,7 @@ const config = {
   // Initialize Firebase
   firebase.initializeApp(config);
   const auth = firebase.auth();
-  const provider = firebase.auth.GoogleAuthProvider();
+  const provider = new firebase.auth.GoogleAuthProvider();
   const signIn = document.getElementById('sign-up')
   
   signIn.onclick = () => auth.signInWithPopup(provider);
